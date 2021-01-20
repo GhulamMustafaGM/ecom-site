@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// All routes here
 
 Route::get('/', function () {
     return view('welcome');
@@ -26,7 +25,7 @@ Route::group(['middleware'=>'admin_auth'],function(){
     Route::get('admin/category',[CategoryController::class,'index']);
     Route::get('admin/category/manage_category',[CategoryController::class,'manage_category']);
     Route::get('admin/category/manage_category/{id}',[CategoryController::class,'manage_category']);
-    Route::post('admin/category/manage_category_process',[CategoryController::class,'manage_category_process'])->name('category.maanage_category_process');
+    Route::post('admin/category/manage_category_process',[CategoryController::class,'manage_category_process'])->name('category.manage_category_process');
     Route::get('admin/category/delete/{id}',[CategoryController::class,'delete']);
     
     
