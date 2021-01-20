@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// All routes here
 
 Route::get('/', function () {
     return view('welcome');
