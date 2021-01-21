@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dashboard</title>
+    <title>@yield('page_title')</title>
     <link href="{{ asset('admin_assets/css/font-face.css') }}" rel="stylesheet" media="all">
     <link href="{{ asset('admin_assets/vendor/font-awesome-4.7/css/font-awesome.min.css') }}" rel="stylesheet"
         media="all">

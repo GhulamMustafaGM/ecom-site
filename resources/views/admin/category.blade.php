@@ -1,5 +1,5 @@
 @extends('admin/layout')
-
+@section('page_title', 'Category')
 @section('container')
     {{ session('message') }}
     <h1 class="mb10">Category</h1>
