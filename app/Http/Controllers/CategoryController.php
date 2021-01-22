@@ -13,7 +13,6 @@ class CategoryController extends Controller
         return view('admin/category', $result);
     }
 
-
     public function manage_category(Request $request, $id = '')
     {
         if ($id > 0) {

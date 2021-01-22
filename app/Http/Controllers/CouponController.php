@@ -18,7 +18,6 @@ class CouponController extends Controller
         return view('admin/coupon', $result);
     }
 
-
     public function manage_coupon(Request $request, $id = '')
     {
         if ($id > 0) {
