@@ -4,6 +4,7 @@
 @section('container')
     {{ session('message') }}
     <h1 class="mb10">Category</h1>
+    <a href="{{url('admin/category/manage_category')}}">
     <a href="category/manage_category">
         <button type="button" class="btn btn-success">
             Add Category

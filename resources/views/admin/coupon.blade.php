@@ -4,6 +4,7 @@
 @section('container')
     {{ session('message') }}
     <h1 class="mb10">Coupon</h1>
+    <a href="{{url('admin/coupon/manage_coupon')}}">
     <a href="{{ url('admin/coupon/manage_coupon') }}">
         <button type="button" class="btn btn-success">
             Add Coupon
