@@ -31,8 +31,14 @@ Route::group(['middleware' => 'admin_auth'], function () {
     Route::get('admin/category/manage_category/{id}', [CategoryController::class, 'manage_category']);
     Route::post('admin/category/manage_category_process', [CategoryController::class, 'manage_category_process'])->name('category.manage_category_process');
     Route::get('admin/category/delete/{id}', [CategoryController::class, 'delete']);
-
     Route::get('admin/category/status/{status}/{id}',[CategoryController::class,'status']);
+
+    Route::get('admin/size',[SizeController::class,'index']);
+    Route::get('admin/size/manage_size',[SizeController::class,'manage_size']);
+    Route::get('admin/size/manage_size/{id}',[SizeController::class,'manage_size']);
+    Route::post('admin/size/manage_size_process',[SizeController::class,'manage_size_process'])->name('size.manage_size_process');
+    Route::get('admin/cousizepon/delete/{id}',[SizeController::class,'delete']);
+    Route::get('admin/size/status/{status}/{id}',[SizeController::class,'status']);
 
     Route::get('admin/coupon',[CouponController::class,'index']);
     Route::get('admin/coupon/manage_coupon',[CouponController::class,'manage_coupon']);
