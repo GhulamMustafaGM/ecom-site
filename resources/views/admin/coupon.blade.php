@@ -2,9 +2,15 @@
 @section('page_title', 'Coupon')
 @section('coupon_select', 'active')
 @section('container')
-    {{ session('message') }}
+    @if (session()->has('message'))
+        <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
+            {{ session('message') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+    @endif
     <h1 class="mb10">Coupon</h1>
-    <a href="{{url('admin/coupon/manage_coupon')}}">
     <a href="{{ url('admin/coupon/manage_coupon') }}">
         <button type="button" class="btn btn-success">
             Add Coupon
@@ -34,7 +40,6 @@
                                 <td>
                                     <a href="{{ url('admin/coupon/manage_coupon/') }}/{{ $list->id }}"><button type="button"
                                             class="btn btn-success">Edit</button></a>
-
                                     @if ($list->status == 1)
                                         <a href="{{ url('admin/coupon/status/0') }}/{{ $list->id }}"><button type="button"
                                                 class="btn btn-primary">Active</button></a>
@@ -42,10 +47,8 @@
                                         <a href="{{ url('admin/coupon/status/1') }}/{{ $list->id }}"><button type="button"
                                                 class="btn btn-warning">Deactive</button></a>
                                     @endif
-
                                     <a href="{{ url('admin/coupon/delete/') }}/{{ $list->id }}"><button type="button"
                                             class="btn btn-danger">Delete</button></a>
-
                                 </td>
                             </tr>
                         @endforeach
