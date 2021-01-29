@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -45,18 +44,21 @@
 
                                 <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
 
-                                <div class="alert alert-danger" role="alert">
-                                    {{ session('error') }}
-                                </div>
+                                @if (session()->has('error'))
+                                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
+                                        {{ session('error') }}
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                @endif
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-
     <script src="{{ asset('admin_assets/vendor/jquery-3.2.1.min.js') }}"></script>
     <script src="{{ asset('admin_assets/vendor/bootstrap-4.1/popper.min.js') }}"></script>
     <script src="{{ asset('admin_assets/vendor/bootstrap-4.1/bootstrap.min.js') }}"></script>
