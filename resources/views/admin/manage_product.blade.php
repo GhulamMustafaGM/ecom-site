@@ -367,10 +367,8 @@
                 loop_image_count + '")><i class="fa fa-minus"></i>&nbsp; Remove</button></div>';
             jQuery('#product_images_box').append(html)
         }
-
         function remove_image_more(loop_image_count) {
             jQuery('.product_images_' + loop_image_count).remove();
         }
-
     </script>
 @endsection

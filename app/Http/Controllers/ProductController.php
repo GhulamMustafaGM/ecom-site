@@ -36,7 +36,6 @@ class ProductController extends Controller
             $result['id'] = $arr['0']->id;
 
             $result['productAttrArr'] = DB::table('products_attr')->where(['products_id' => $id])->get();
-
             $productImagesArr = DB::table('product_images')->where(['products_id' => $id])->get();
 
             if (!isset($productImagesArr[0])) {
