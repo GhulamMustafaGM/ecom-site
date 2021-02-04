@@ -382,4 +382,5 @@
             jQuery('.product_images_' + loop_image_count).remove();
         }
     </script>
+    
 @endsection
