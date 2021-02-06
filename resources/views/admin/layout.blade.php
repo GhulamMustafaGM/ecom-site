@@ -69,6 +69,16 @@
                             <a href="{{ url('admin/color') }}">
                                 <i class="fas fa-paint-brush"></i>Color</a>
                         </li>
+
+                        <li class="@yield('tax_select')">
+                            <a href="{{ url('admin/tax') }}">
+                                <i class="fa fa-product-hunt"></i>Tax</a>
+                        </li>
+
+                        <li class="@yield('product_select')">
+                            <a href="{{ url('admin/product') }}">
+                                <i class="fa fa-product-hunt"></i>Product</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -107,7 +117,7 @@
 
                         <li class="@yield('brand_select')">
                             <a href="{{ url('admin/brand') }}">
-                                <i class="fa fa-product-hunt"></i>Brand</a>
+                                <i class="fa fa-bold"></i>Brand</a>
                         </li>
 
                         <li class="@yield('color_select')">
@@ -115,10 +125,17 @@
                                 <i class="fas fa-paint-brush"></i>Color</a>
                         </li>
 
+                        <li class="@yield('tax_select')">
+                            <a href="{{ url('admin/tax') }}">
+                                <i class="fa fa-product-hunt"></i>Tax</a>
+                        </li>
+
                         <li class="@yield('product_select')">
                             <a href="{{ url('admin/product') }}">
                                 <i class="fa fa-product-hunt"></i>Product</a>
                         </li>
+
+
                     </ul>
                 </nav>
             </div>
@@ -175,15 +192,11 @@
             </div>
         </div>
         <!-- END PAGE CONTAINER-->
-
     </div>
-
-
     <script src="{{ asset('admin_assets/vendor/jquery-3.2.1.min.js') }}"></script>
     <script src="{{ asset('admin_assets/vendor/bootstrap-4.1/popper.min.js') }}"></script>
     <script src="{{ asset('admin_assets/vendor/bootstrap-4.1/bootstrap.min.js') }}"></script>
     <script src="{{ asset('admin_assets/vendor/wow/wow.min.js') }}"></script>
     <script src="{{ asset('admin_assets/js/main.js') }}"></script>
 </body>
-
 </html>
