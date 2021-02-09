@@ -1,12 +1,12 @@
 <?php
-
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\CouponController;
-use App\Http\Controllers\SizeController;
-use App\Http\Controllers\ColorController;
-use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ColorController;
+use App\Http\Controllers\CouponController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SizeController;
 use App\Http\Controllers\TaxController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', function () {
     return view('welcome');
@@ -58,7 +58,6 @@ Route::group(['middleware' => 'admin_auth'], function () {
     Route::get('admin/color/delete/{id}', [ColorController::class, 'delete']);
     Route::get('admin/color/status/{status}/{id}', [ColorController::class, 'status']);
 
-
     Route::get('admin/product', [ProductController::class, 'index']);
     Route::get('admin/product/manage_product', [ProductController::class, 'manage_product']);
     Route::get('admin/product/manage_product/{id}', [ProductController::class, 'manage_product']);
@@ -82,6 +81,16 @@ Route::group(['middleware' => 'admin_auth'], function () {
     Route::get('admin/tax/delete/{id}', [TaxController::class, 'delete']);
     Route::get('admin/tax/status/{status}/{id}', [TaxController::class, 'status']);
 
+    Route::get('admin/tax', [TaxController::class, 'index']);
+    Route::get('admin/tax/manage_tax', [TaxController::class, 'manage_tax']);
+    Route::get('admin/tax/manage_tax/{id}', [TaxController::class, 'manage_tax']);
+    Route::post('admin/tax/manage_tax_process', [TaxController::class, 'manage_tax_process'])->name('tax.manage_tax_process');
+    Route::get('admin/tax/delete/{id}', [TaxController::class, 'delete']);
+    Route::get('admin/tax/status/{status}/{id}', [TaxController::class, 'status']);
+
+    Route::get('admin/customer', [CustomerController::class, 'index']);
+    Route::get('admin/customer/show/{id}', [CustomerController::class, 'show']);
+    Route::get('admin/customer/status/{status}/{id}', [CustomerController::class, 'status']);
 
     Route::get('admin/logout', function () {
         session()->forget('ADMIN_LOGIN');
