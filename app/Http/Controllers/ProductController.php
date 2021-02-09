@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Storage;
 
-
 class ProductController extends Controller
 {
     public function index()
@@ -15,7 +14,6 @@ class ProductController extends Controller
         $result['data'] = Product::all();
         return view('admin/product', $result);
     }
-
 
     public function manage_product(Request $request, $id = '')
     {
@@ -89,8 +87,8 @@ class ProductController extends Controller
             $result['productImagesArr']['0']['id'] = '';
             $result['productImagesArr']['0']['images'] = '';
             /*echo '<pre>';
-            print_r( $result['productAttrArr']);
-            die();*/
+        print_r( $result['productAttrArr']);
+        die();*/
         }
         /*echo '<pre>';
         print_r( $result);
@@ -123,7 +121,7 @@ class ProductController extends Controller
             'image' => $image_validation,
             'slug' => 'required|unique:products,slug,' . $request->post('id'),
             'attr_image.*' => 'mimes:jpg,jpeg,png',
-            'images.*' => 'mimes:jpg,jpeg,png'
+            'images.*' => 'mimes:jpg,jpeg,png',
         ]);
 
         $paidArr = $request->post('paid');
@@ -134,7 +132,10 @@ class ProductController extends Controller
         $size_idArr = $request->post('size_id');
         $color_idArr = $request->post('color_id');
         foreach ($skuArr as $key => $val) {
-            $check = DB::table('products_attr')->where('sku', '=', $skuArr[$key])->where('id', '!=', $paidArr[$key])->get();
+            $check = DB::table('products_attr')->
+                where('sku', '=', $skuArr[$key])->
+                where('id', '!=', $paidArr[$key])->
+                get();
 
             if (isset($check[0])) {
                 $request->session()->flash('sku_error', $skuArr[$key] . ' SKU already used');
@@ -164,7 +165,7 @@ class ProductController extends Controller
             $model->image = $image_name;
         }
 
-        $model->category_id = $request->post('category_id');;
+        $model->category_id = $request->post('category_id');
         $model->name = $request->post('name');
         $model->slug = $request->post('slug');
         $model->brand = $request->post('brand');
@@ -189,9 +190,9 @@ class ProductController extends Controller
             $productAttrArr = [];
             $productAttrArr['products_id'] = $pid;
             $productAttrArr['sku'] = $skuArr[$key];
-            $productAttrArr['mrp'] = (int)$mrpArr[$key];
-            $productAttrArr['price'] = (int)$priceArr[$key];
-            $productAttrArr['qty'] = (int)$qtyArr[$key];
+            $productAttrArr['mrp'] = (int) $mrpArr[$key];
+            $productAttrArr['price'] = (int) $priceArr[$key];
+            $productAttrArr['qty'] = (int) $qtyArr[$key];
             if ($size_idArr[$key] == '') {
                 $productAttrArr['size_id'] = 0;
             } else {
@@ -224,6 +225,7 @@ class ProductController extends Controller
             } else {
                 DB::table('products_attr')->insert($productAttrArr);
             }
+
         }
         /*Product Attr End*/
 
@@ -252,6 +254,7 @@ class ProductController extends Controller
                 } else {
                     DB::table('product_images')->insert($productImageArr);
                 }
+
             }
         }
 
@@ -259,6 +262,7 @@ class ProductController extends Controller
 
         $request->session()->flash('message', $msg);
         return redirect('admin/product');
+
     }
 
     public function delete(Request $request, $id)
