@@ -15,6 +15,10 @@ class CreateHomeBannersTable extends Migration
     {
         Schema::create('home_banners', function (Blueprint $table) {
             $table->id();
+            $table->string("image");
+            $table->string("btn_txt");
+            $table->string("btn_link");
+            $table->integer("status");
             $table->timestamps();
         });
     }
