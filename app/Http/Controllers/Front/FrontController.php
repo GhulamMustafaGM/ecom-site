@@ -86,6 +86,10 @@ class FrontController extends Controller
 
         }
 
+        $result['home_banner'] = DB::table('home_banners')
+            ->where(['status' => 1])
+            ->get();
+
         return view('front.index', $result);
     }
 }
