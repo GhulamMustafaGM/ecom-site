@@ -109,6 +109,13 @@ class FrontController extends Controller
                 ->where(['products_attr.products_id' => $list1->id])
                 ->get();
         }
+
+        foreach ($result['product'] as $list1) {
+            $result['product_images'][$list1->id] =
+            DB::table('product_images')
+                ->where(['product_images.products_id' => $list1->id])
+                ->get();
+        }
         $result['related_product'] =
         DB::table('products')
             ->where(['status' => 1])
