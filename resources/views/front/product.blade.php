@@ -1,24 +1,24 @@
 @extends('front/layout')
-@section('page_title',$product[0]->name)
+@section('page_title', $product[0]->name)
 @section('container')
 
 
-    <!-- catg header banner section -->
-    <!--<section id="aa-catg-head-banner">
-                <div class="aa-catg-head-banner-area">
-                    <div class="container">
-                    <div class="aa-catg-head-banner-content">
-                    <h2>T-Shirt</h2>
-                    <ol class="breadcrumb">
-                        <li><a href="index.html">Home</a></li>         
-                        <li><a href="#">Product</a></li>
-                        <li class="active">T-shirt</li>
-                    </ol>
-                    </div>
-                    </div>
-                </div>
-                </section>-->
-    <!-- / catg header banner section -->
+<!-- catg header banner section -->
+<!--<section id="aa-catg-head-banner">
+    <div class="aa-catg-head-banner-area">
+        <div class="container">
+        <div class="aa-catg-head-banner-content">
+        <h2>T-Shirt</h2>
+        <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>         
+            <li><a href="#">Product</a></li>
+            <li class="active">T-shirt</li>
+        </ol>
+        </div>
+        </div>
+    </div>
+    </section>-->
+<!-- / catg header banner section -->
 
     <!-- product category -->
     <section id="aa-product-details">
@@ -42,10 +42,24 @@
                                             <div class="simpleLens-thumbnails-container">
                                                 <a data-big-image="{{ asset('storage/media/' . $product[0]->image) }}"
                                                     data-lens-image="{{ asset('storage/media/' . $product[0]->image) }}"
-                                                    class="simpleLens-thumbnail-wrapper" href="#">
-                                                    <img src="{{ asset('storage/media/' . $product[0]->image) }}"
-                                                        width="100px">
+                                                    class="simpleLens-thumbnail-wrapper" href="#"><img
+                                                        src="{{ asset('storage/media/' . $product[0]->image) }}" width="70px">
                                                 </a>
+
+                                                @if (isset($product_images[$product[0]->id][0]))
+
+                                                    @foreach ($product_images[$product[0]->id] as $list)
+
+                                                        <a data-big-image="{{ asset('storage/media/' . $list->images) }}"
+                                                            data-lens-image="{{ asset('storage/media/' . $list->images) }}"
+                                                            class="simpleLens-thumbnail-wrapper" href="#"><img
+                                                                src="{{ asset('storage/media/' . $list->images) }}"
+                                                                width="70px">
+                                                        </a>
+
+                                                    @endforeach
+
+                                                @endif
 
                                             </div>
                                         </div>
@@ -88,7 +102,10 @@
                                             @foreach ($product_attr[$product[0]->id] as $attr)
 
                                                 @if ($attr->color != '')
-                                                    <a href="#" class="aa-color-{{ strtolower($attr->color) }}"></a>
+
+                                                    <a href="javascript:void(0)"
+                                                        class="aa-color-{{ strtolower($attr->color) }}"
+                                                        onclick=change_product_color_image("{{ asset('storage/media/' . $attr->attr_image) }}")></a>
                                                 @endif
 
                                             @endforeach
@@ -233,6 +250,7 @@
                                             <figure>
                                     <li>
                                 @endif
+
                             </ul>
                         </div>
                     </div>
