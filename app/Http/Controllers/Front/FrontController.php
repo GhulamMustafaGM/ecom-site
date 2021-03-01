@@ -130,7 +130,6 @@ class FrontController extends Controller
                 ->where(['products_attr.products_id' => $list1->id])
                 ->get();
         }
-
         return view('front.product', $result);
     }
 
