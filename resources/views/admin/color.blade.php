@@ -34,15 +34,15 @@
                                 <td>{{ $list->id }}</td>
                                 <td>{{ $list->color }}</td>
                                 <td>
-                                    <a href="{{ url('admin/color/manage_color/') }}/{{ $list->id }}"><button type="button"
-                                            class="btn btn-success">Edit</button></a>
+                                    <a href="{{ url('admin/color/manage_color/') }}/{{ $list->id }}"><button
+                                            type="button" class="btn btn-success">Edit</button></a>
 
                                     @if ($list->status == 1)
-                                        <a href="{{ url('admin/color/status/0') }}/{{ $list->id }}"><button type="button"
-                                                class="btn btn-primary">Active</button></a>
+                                        <a href="{{ url('admin/color/status/0') }}/{{ $list->id }}"><button
+                                                type="button" class="btn btn-primary">Active</button></a>
                                     @elseif($list->status==0)
-                                        <a href="{{ url('admin/color/status/1') }}/{{ $list->id }}"><button type="button"
-                                                class="btn btn-warning">Deactive</button></a>
+                                        <a href="{{ url('admin/color/status/1') }}/{{ $list->id }}"><button
+                                                type="button" class="btn btn-warning">Deactive</button></a>
                                     @endif
 
                                     <a href="{{ url('admin/color/delete/') }}/{{ $list->id }}"><button type="button"
