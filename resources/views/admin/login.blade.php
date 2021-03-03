@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -58,7 +59,9 @@
                 </div>
             </div>
         </div>
+
     </div>
+
     <script src="{{ asset('admin_assets/vendor/jquery-3.2.1.min.js') }}"></script>
     <script src="{{ asset('admin_assets/vendor/bootstrap-4.1/popper.min.js') }}"></script>
     <script src="{{ asset('admin_assets/vendor/bootstrap-4.1/bootstrap.min.js') }}"></script>
