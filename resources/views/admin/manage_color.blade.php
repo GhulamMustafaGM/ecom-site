@@ -18,8 +18,8 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="color" class="control-label mb-1">Color </label>
-                                    <input id="color" value="{{ $color }}" name="color" type="text" class="form-control"
-                                        aria-required="true" aria-invalid="false" required>
+                                    <input id="color" value="{{ $color }}" name="color" type="text"
+                                        class="form-control" aria-required="true" aria-invalid="false" required>
                                     @error('color')
                                         <div class="alert alert-danger" role="alert">
                                             {{ $message }}
