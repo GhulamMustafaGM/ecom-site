@@ -46,6 +46,7 @@
                                         <a href="{{ url('admin/customer/status/1') }}/{{ $list->id }}"><button
                                                 type="button" class="btn btn-warning">Deactive</button></a>
                                     @endif
+
                                 </td>
                             </tr>
                         @endforeach
