@@ -56,6 +56,7 @@
                             <td><strong>Updated On</strong></td>
                             <td>{{ \Carbon\Carbon::parse($customer_list->updated_at)->format('d-m-Y h:i:s') }}</td>
                         </tr>
+
                     </tbody>
                 </table>
             </div>
