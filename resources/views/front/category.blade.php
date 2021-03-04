@@ -12,13 +12,15 @@
                             <div class="aa-product-catg-head-left">
                                 <form action="" class="aa-sort-form">
                                     <label for="">Sort by</label>
-                                    <select name="">
-                                        <option value="1" selected="Default">Default</option>
-                                        <option value="2">Name</option>
-                                        <option value="3">Price</option>
-                                        <option value="4">Date</option>
+                                    <select name="" onchange="sort_by()" id="sort_by_value">
+                                        <option value="" selected="Default">Default</option>
+                                        <option value="name">Name</option>
+                                        <option value="price_desc">Price - Desc</option>
+                                        <option value="price_asc">Price - Asc</option>
+                                        <option value="date">Date</option>
                                     </select>
                                 </form>
+                                {{ $sort_txt }}
                             </div>
                             <div class="aa-product-catg-head-right">
                                 <a id="grid-catg" href="#"><span class="fa fa-th"></span></a>
@@ -31,6 +33,7 @@
 
                                 @if (isset($product[0]))
                                     @foreach ($product as $productArr)
+
                                         <li>
                                             <figure>
                                                 <a class="aa-product-img"
@@ -123,5 +126,9 @@
         <input type="hidden" id="pqty" name="pqty" />
         <input type="hidden" id="product_id" name="product_id" />
         @csrf
+    </form>
+
+    <form id="categoryFilter">
+        <input type="hidden" id="sort" name="sort" value="{{ $sort }}" />
     </form>
 @endsection
