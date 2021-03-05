@@ -449,6 +449,8 @@ function sort_by() {
     jQuery('#categoryFilter').submit();
 }
 
+
+// added price sort fucntions
 function sort_price_filter() {
     jQuery('#filter_price_start').val(jQuery('#skip-value-lower').html());
     jQuery('#filter_price_end').val(jQuery('#skip-value-upper').html());
