@@ -35,7 +35,7 @@
 
 </head>
 
-<body>
+<body class="productPage">
     <!-- wpf loader Two -->
     <div id="wpf-loader-two">
         <div class="wpf-loader-two-inner">
