@@ -4199,6 +4199,13 @@ img {
 .aa-color-yellow{
   background-color:yellow;
 }
+.aa-color-cream{
+  background-color:#f4e8e8;
+}
 .mt10{
   margin-top: 10px;
+}
+
+.active_color{
+  border: 3px solid #008000;
 }
