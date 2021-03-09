@@ -4209,3 +4209,7 @@ img {
 .active_color{
   border: 3px solid #008000;
 }
+
+.left_cat_active{
+  color:#ff6666;
+}
