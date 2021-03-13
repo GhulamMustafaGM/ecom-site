@@ -5,19 +5,19 @@
 
     <!-- catg header banner section -->
     <!--<section id="aa-catg-head-banner">
-       <div class="aa-catg-head-banner-area">
-         <div class="container">
-          <div class="aa-catg-head-banner-content">
-            <h2>T-Shirt</h2>
-            <ol class="breadcrumb">
-              <li><a href="index.html">Home</a></li>         
-              <li><a href="#">Product</a></li>
-              <li class="active">T-shirt</li>
-            </ol>
-          </div>
-         </div>
-       </div>
-      </section>-->
+           <div class="aa-catg-head-banner-area">
+             <div class="container">
+              <div class="aa-catg-head-banner-content">
+                <h2>T-Shirt</h2>
+                <ol class="breadcrumb">
+                  <li><a href="index.html">Home</a></li>         
+                  <li><a href="#">Product</a></li>
+                  <li class="active">T-shirt</li>
+                </ol>
+              </div>
+             </div>
+           </div>
+          </section>-->
     <!-- / catg header banner section -->
 
     <!-- product category -->
@@ -43,7 +43,8 @@
                                                 <a data-big-image="{{ asset('storage/media/' . $product[0]->image) }}"
                                                     data-lens-image="{{ asset('storage/media/' . $product[0]->image) }}"
                                                     class="simpleLens-thumbnail-wrapper" href="#"><img
-                                                        src="{{ asset('storage/media/' . $product[0]->image) }}" width="70px">
+                                                        src="{{ asset('storage/media/' . $product[0]->image) }}"
+                                                        width="70px">
                                                 </a>
 
                                                 @if (isset($product_images[$product[0]->id][0]))
