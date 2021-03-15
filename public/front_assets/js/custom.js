@@ -34,9 +34,11 @@ jQuery(function ($) {
 
     jQuery(".aa-cartbox").hover(function () {
         jQuery(this).find(".aa-cartbox-summary").fadeIn(500);
-    }, function () {
-        jQuery(this).find(".aa-cartbox-summary").fadeOut(500);
-    });
+    }
+        , function () {
+            jQuery(this).find(".aa-cartbox-summary").fadeOut(500);
+        }
+    );
 
     /* ----------------------------------------------------------- */
     /*  2. TOOLTIP
@@ -66,29 +68,30 @@ jQuery(function ($) {
         speed: 300,
         slidesToShow: 4,
         slidesToScroll: 4,
-        responsive: [{
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
             // You can unslick at a given breakpoint now by adding:
             // settings: "unslick"
             // instead of a settings object
@@ -106,29 +109,30 @@ jQuery(function ($) {
         speed: 300,
         slidesToShow: 4,
         slidesToScroll: 4,
-        responsive: [{
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
             // You can unslick at a given breakpoint now by adding:
             // settings: "unslick"
             // instead of a settings object
@@ -144,29 +148,30 @@ jQuery(function ($) {
         speed: 300,
         slidesToShow: 4,
         slidesToScroll: 4,
-        responsive: [{
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
             // You can unslick at a given breakpoint now by adding:
             // settings: "unslick"
             // instead of a settings object
@@ -198,29 +203,30 @@ jQuery(function ($) {
         autoplaySpeed: 2000,
         slidesToShow: 5,
         slidesToScroll: 1,
-        responsive: [{
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                infinite: true,
-                dots: true
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
             // You can unslick at a given breakpoint now by adding:
             // settings: "unslick"
             // instead of a settings object
@@ -328,29 +334,30 @@ jQuery(function ($) {
         speed: 300,
         slidesToShow: 4,
         slidesToScroll: 4,
-        responsive: [{
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
             // You can unslick at a given breakpoint now by adding:
             // settings: "unslick"
             // instead of a settings object
@@ -371,13 +378,11 @@ function showColor(size) {
     jQuery('.size_link').css('border', '1px solid #ddd');
     jQuery('#size_' + size).css('border', '1px solid black');
 }
-
 function home_add_to_cart(id, size_str_id, color_str_id) {
     jQuery('#color_id').val(color_str_id);
     jQuery('#size_id').val(size_str_id);
     add_to_cart(id, size_str_id, color_str_id);
 }
-
 function add_to_cart(id, size_str_id, color_str_id) {
     jQuery('#add_to_cart_msg').html('');
     var color_id = jQuery('#color_id').val();
@@ -449,15 +454,12 @@ function sort_by() {
     jQuery('#categoryFilter').submit();
 }
 
-
-// added price sort fucntions
 function sort_price_filter() {
     jQuery('#filter_price_start').val(jQuery('#skip-value-lower').html());
     jQuery('#filter_price_end').val(jQuery('#skip-value-upper').html());
     jQuery('#categoryFilter').submit();
-
 }
-// set colors
+
 function setColor(color, type) {
     var color_str = jQuery('#color_filter').val();
     if (type == 1) {
@@ -495,6 +497,27 @@ jQuery('#frmRegistration').submit(function (e) {
             if (result.status == "success") {
                 jQuery('#frmRegistration')[0].reset();
                 jQuery('#thank_you_msg').html(result.msg);
+            }
+        }
+    });
+});
+
+jQuery('#frmLogin').submit(function (e) {
+    jQuery('#login_msg').html("");
+    e.preventDefault();
+    jQuery.ajax({
+        url: '/login_process',
+        data: jQuery('#frmLogin').serialize(),
+        type: 'post',
+        success: function (result) {
+            if (result.status == "error") {
+                jQuery('#login_msg').html(result.msg);
+            }
+
+            if (result.status == "success") {
+                window.location.href = '/'
+                //jQuery('#frmLogin')[0].reset();
+                //jQuery('#thank_you_msg').html(result.msg);
             }
         }
     });
