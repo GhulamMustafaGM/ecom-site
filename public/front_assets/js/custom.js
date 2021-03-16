@@ -502,6 +502,8 @@ jQuery('#frmRegistration').submit(function (e) {
     });
 });
 
+// jQuery
+
 jQuery('#frmLogin').submit(function (e) {
     jQuery('#login_msg').html("");
     e.preventDefault();
