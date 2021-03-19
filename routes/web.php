@@ -38,6 +38,7 @@ Route::get('logout', function () {
     session()->forget('FRONT_USER_NAME');
     return redirect('/');
 });
+Route::get('/verification/{id}', [FrontController::class, 'email_verification']);
 
 Route::get('admin', [AdminController::class, 'index']);
 Route::post('admin/auth', [AdminController::class, 'auth'])->name('admin.auth');
