@@ -20,7 +20,6 @@
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -77,7 +76,6 @@
                                     @else
                                         <li><a href="" data-toggle="modal" data-target="#login-modal">Login</a></li>
                                     @endif
-
 
                                 </ul>
                             </div>
@@ -146,7 +144,7 @@
                                             </li>
                                         </ul>
                                         <a class="aa-cartbox-checkout aa-primary-btn"
-                                            href="{{ url('/checkout') }}">Checkout</a>
+                                            href="{{ url('/cart') }}">Cart</a>
 
                                     @endif
                                 </div>
