@@ -566,5 +566,10 @@ jQuery('#frmUpdatePassword').submit(function (e) {
 });
 
 function applyCouponCode() {
-    alert('a');
+    var coupon_code=jQuery('#coupon_code').value();
+    if(coupon_code!='') {
+
+    }else {
+        jQuery('#coupon_code_msg').html('please enter coupon code');
+    }
 }
