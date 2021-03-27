@@ -4594,3 +4594,7 @@ img {
   color: green;
   font-weight: bold;
 }
+
+.coupon_code_msg {
+  color: red;
+}
