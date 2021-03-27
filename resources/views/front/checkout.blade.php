@@ -141,8 +141,8 @@
                                         </div>
                                         <h4>Coupon Code</h4>
                                         <div class="aa-payment-method coupon_code">
-                                            <input type="text" placeholder="Coupon Code" class="aa-coupon-code">
-                                            <input type="submit" value="Apply Coupon" class="aa-browse-btn">
+                                            <input type="text" placeholder="Coupon Code" class="aa-coupon-code" name="coupon_code" id="coupon_code">
+                                            <input type="button" value="Apply Coupon" class="aa-browse-btn" onclick="applyCouponCode()">
                                         </div>
                                         <br />
                                         <h4>Payment Method</h4>
