@@ -564,3 +564,7 @@ jQuery('#frmUpdatePassword').submit(function (e) {
         }
     });
 });
+
+function applyCouponCode() {
+    alert('a');
+}
