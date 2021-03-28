@@ -144,7 +144,7 @@
                                             <input type="text" placeholder="Coupon Code" class="aa-coupon-code" name="coupon_code" id="coupon_code">
                                             <input type="button" value="Apply Coupon" class="aa-browse-btn" onclick="applyCouponCode()">
                                             <div>
-                                                
+
                                             </div>
                                         </div>
                                         <br />
@@ -161,6 +161,7 @@
                                     </div>
                                 </div>
                             </div>
+                            @csrf
                         </form>
                     </div>
                 </div>
