@@ -12,7 +12,6 @@
     </section>
     <!-- / catg header banner section -->
 
-
     <section id="checkout">
         <div class="container">
             <div class="row">
@@ -141,7 +140,7 @@
                                                     </tr>
                                                     <tr>
                                                         <th>Total</th>
-                                                        <td id="total_price">INR {{ $totalPrice }}</td>
+                                                        <td id="total_price">PKR {{ $totalPrice }}</td>
                                                     </tr>
                                                 </tfoot>
                                             </table>
