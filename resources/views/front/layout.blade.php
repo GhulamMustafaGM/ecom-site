@@ -20,6 +20,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -67,15 +68,15 @@
                             <!-- / header top left -->
                             <div class="aa-header-top-right">
                                 <ul class="aa-head-top-nav-right">
-                                    <li><a href="javascript:void(0)">My Account</a></li>
+                                    <li><a href="{{ url('/order') }}">My Order</a></li>
 
                                     <li class="hidden-xs"><a href="{{ url('/cart') }}">My Cart</a></li>
-                                    <li class="hidden-xs"><a href="javascript:void(0)">Checkout</a></li>
                                     @if (session()->has('FRONT_USER_LOGIN') != null)
                                         <li><a href="{{ url('/logout') }}">Logout</a></li>
                                     @else
                                         <li><a href="" data-toggle="modal" data-target="#login-modal">Login</a></li>
                                     @endif
+
 
                                 </ul>
                             </div>
