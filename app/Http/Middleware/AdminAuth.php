@@ -16,10 +16,10 @@ class AdminAuth
      */
     public function handle(Request $request, Closure $next)
     {
-        if($request->session()->has('ADMIN_LOGIN')){
-            
-        }else{
-            $request->session()->flash('error','Access Denied');
+        if ($request->session()->has('ADMIN_LOGIN')) {
+
+        } else {
+            $request->session()->flash('error', 'Access Denied');
             return redirect('admin');
         }
         return $next($request);
