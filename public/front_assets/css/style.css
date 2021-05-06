@@ -4608,3 +4608,23 @@ img {
   color: red;
   font-size: 16px;
 }
+
+.order_detail {
+  margin-bottom: 10px;
+  font-weight: bold;
+  line-height: 25px;
+}
+
+.coupon_apply_txt {
+  font-size: 14px;
+  color: red;
+}
+
+.order_id_btn {
+  background-color: #ff6666;
+  padding: 14px;
+}
+
+.order_id_btn a {
+  color: white;
+}
