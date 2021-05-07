@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\ColorController;
 use App\Http\Controllers\Admin\CouponController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\HomeBannerController;
+use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SizeController;
 use App\Http\Controllers\Admin\TaxController;
@@ -130,6 +131,9 @@ Route::group(['middleware' => 'admin_auth'], function () {
     Route::post('admin/home_banner/manage_home_banner_process', [HomeBannerController::class, 'manage_home_banner_process'])->name('home_banner.manage_home_banner_process');
     Route::get('admin/home_banner/delete/{id}', [HomeBannerController::class, 'delete']);
     Route::get('admin/home_banner/status/{status}/{id}', [HomeBannerController::class, 'status']);
+
+    Route::get('admin/order', [OrderController::class, 'index']);
+    Route::get('admin/order_detail/{id}', [OrderController::class, 'order_detail']);
 
     Route::get('admin/logout', function () {
         session()->forget('ADMIN_LOGIN');
