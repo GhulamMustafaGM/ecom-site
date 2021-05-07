@@ -14652,3 +14652,7 @@ section {
 
 .mb10{margin-bottom: 10px;}
 .ml15{margin-left: 15px;}
+
+.order_detail img{
+    width:100px;
+}
