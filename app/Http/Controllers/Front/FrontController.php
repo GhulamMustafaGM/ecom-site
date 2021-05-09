@@ -215,6 +215,16 @@ class FrontController extends Controller
                 ->get();
         }
 
+        $result['product_review'] =
+        DB::table('product_review')
+            ->leftJoin('customers', 'customers.id', '=', 'product_review.customer_id')
+            ->where(['product_review.products_id' => $result['product'][0]->id])
+            ->where(['product_review.status' => 1])
+            ->orderBy('product_review.added_on', 'desc')
+            ->select('product_review.rating', 'product_review.review', 'product_review.added_on', 'customers.name')
+            ->get();
+        //prx($result['product_review']);
+
         return view('front.product', $result);
     }
 
@@ -785,6 +795,29 @@ class FrontController extends Controller
             return redirect('/');
         }
         return view('front.order_detail', $result);
+    }
+
+    public function product_review_process(Request $request)
+    {
+        if ($request->session()->has('FRONT_USER_LOGIN')) {
+            $uid = $request->session()->get('FRONT_USER_ID');
+
+            $arr = [
+                "rating" => $request->rating,
+                "review" => $request->review,
+                "products_id" => $request->product_id,
+                "status" => 1,
+                "customer_id" => $uid,
+                "added_on" => date('Y-m-d h:i:s'),
+            ];
+            $query = DB::table('product_review')->insert($arr);
+            $status = "success";
+            $msg = "Thank you for providing your review";
+        } else {
+            $status = "error";
+            $msg = "Please login to submit your review";
+        }
+        return response()->json(['status' => $status, 'msg' => $msg]);
     }
 
 }
