@@ -636,3 +636,28 @@ jQuery('#frmPlaceOrder').submit(function (e) {
         }
     });
 });
+
+
+jQuery('#frmProductReview').submit(function (e) {
+    //jQuery('#thank_you_msg').html("Please wait...");
+    //jQuery('#thank_you_msg').html("");
+    e.preventDefault();
+    jQuery.ajax({
+        url: '/product_review_process',
+        data: jQuery('#frmProductReview').serialize(),
+        type: 'post',
+        success: function (result) {
+            if (result.status == "success") {
+                jQuery('.review_msg').html(result.msg);
+                jQuery('#frmProductReview')[0].reset();
+                setInterval(function () {
+                    window.location.href = window.location.href
+                }, 3000);
+            } if (result.status == "error") {
+                jQuery('.review_msg').html(result.msg)
+            }
+            //jQuery('#frmUpdatePassword')[0].reset();
+            //jQuery('#thank_you_msg').html(result.msg);
+        }
+    });
+});
