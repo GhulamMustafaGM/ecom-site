@@ -55,9 +55,11 @@ Route::get('/instamojo_payment_redirect', [FrontController::class, 'instamojo_pa
 
 Route::post('product_review_process', [FrontController::class, 'product_review_process']);
 
-Route::group(['middleware' => 'user_auth'], function () {
-    Route::get('/order', [FrontController::class, 'order']);
-    Route::get('/order_detail/{id}', [FrontController::class, 'order_detail']);
+Route::group(['middleware' => 'disable_back_btn'], function () {
+    Route::group(['middleware' => 'user_auth'], function () {
+        Route::get('/order', [FrontController::class, 'order']);
+        Route::get('/order_detail/{id}', [FrontController::class, 'order_detail']);
+    });
 });
 
 Route::get('admin', [AdminController::class, 'index']);
